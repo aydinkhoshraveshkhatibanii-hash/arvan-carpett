@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>گالری فرش آرون | Arvan Carpet Gallery</title>
+<style>
+body{margin:0;font-family:Tahoma,Arial;background:#f7f1e7;color:#17343b;line-height:2}
+header,footer{background:#102b35;color:#d6b675;text-align:center;padding:24px}
+header h1{font-size:30px}
+nav{text-align:center;padding:16px;background:#193d46}
+nav a{color:white;margin:8px;text-decoration:none}
+.hero{text-align:center;padding:90px 20px;background:linear-gradient(#102b35bb,#102b35dd),url('https://images.unsplash.com/photo-1600166898405-da9535204843?auto=format&fit=crop&w=1200&q=80') center/cover;color:white}
+.hero h2{font-size:36px;color:#d6b675}
+button{background:#d6b675;border:0;padding:12px 22px;font-size:16px}
+section{padding:35px 20px;text-align:center}
+.cards{display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
+.card{background:white;padding:12px;max-width:280px;flex:1 1 220px}
+.card img{width:100%;height:220px;object-fit:cover}
+.contact{background:#102b35;color:white}
+a{color:inherit}
+</style>
+</head>
+<body>
+<header>
+<h1>گالری فرش آرون</h1>
+<div>ARVAN CARPET GALLERY</div>
+<p>اصالت ایرانی؛ هنر ماندگار</p>
+<button onclick="toggleLang()">English / فارسی</button>
+</header>
+<nav>
+<a href="#about">درباره ما</a>
+<a href="#collection">مجموعه فرش‌ها</a>
+<a href="#contact">تماس با ما</a>
+</nav>
+<div class="hero">
+<h2 data-fa="هنر دست، میراث ایران" data-en="Persian Art, Timeless Heritage">هنر دست، میراث ایران</h2>
+<p data-fa="مجموعه‌ای منتخب از فرش‌های دستباف اصیل و نفیس ایرانی" data-en="A curated collection of authentic Persian handmade rugs">مجموعه‌ای منتخب از فرش‌های دستباف اصیل و نفیس ایرانی</p>
+<a href="#collection"><button data-fa="مشاهده مجموعه" data-en="Explore Collection">مشاهده مجموعه</button></a>
+</div>
+<section id="about">
+<h2 data-fa="داستان آرون" data-en="Our Story">داستان آرون</h2>
+<p data-fa="هر فرش، روایتی از هنر، صبر و فرهنگ ایرانی است. در گالری آرون، زیبایی و اصالت را در کنار هم گرد آورده‌ایم." data-en="Every rug tells a story of Persian artistry, patience and culture. At Arvan, we bring beauty and authenticity together.">هر فرش، روایتی از هنر، صبر و فرهنگ ایرانی است. در گالری آرون، زیبایی و اصالت را در کنار هم گرد آورده‌ایم.</p>
+</section>
+<section id="collection">
+<h2 data-fa="گزیده مجموعه ما" data-en="Our Collection">گزیده مجموعه ما</h2>
+<div class="cards">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600166898405-da9535204843?auto=format&fit=crop&w=600&q=80" alt="فرش ایرانی">
+<h3 data-fa="فرش دستباف اصیل" data-en="Authentic Handmade Rugs">فرش دستباف اصیل</h3>
+<p data-fa="نقوش سنتی و هنر دست هنرمندان ایرانی" data-en="Traditional designs woven by Persian artisans">نقوش سنتی و هنر دست هنرمندان ایرانی</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=600&q=80" alt="دکوراسیون و فرش">
+<h3 data-fa="فرش‌های نفیس" data-en="Fine Rugs">فرش‌های نفیس</h3>
+<p data-fa="برای خانه‌هایی با سلیقه خاص" data-en="For homes with distinctive taste">برای خانه‌هایی با سلیقه خاص</p>
+</div>
+</div>
+<p data-fa="برای قیمت و موجودی روز با ما تماس بگیرید." data-en="Contact us for current prices and availability.">برای قیمت و موجودی روز با ما تماس بگیرید.</p>
+</section>
+<section id="contact" class="contact">
+<h2 data-fa="ارتباط با آرون" data-en="Contact Arvan">ارتباط با آرون</h2>
+<p>تهران، میدان تجریش، پاساژ تندیس، طبقه منفی یک، واحد ۷۲</p>
+<p>تلفن: <a href="tel:+989123394220" dir="ltr">09123394220</a></p>
+<p>اینستاگرام: <a href="https://instagram.com/Arvan_carpet">@Arvan_carpet</a></p>
+</section>
+<footer>ARVAN CARPET GALLERY © 2026</footer>
+<script>
+let en=false;
+function toggleLang(){
+en=!en;
+document.documentElement.lang=en?'en':'fa';
+document.documentElement.dir=en?'ltr':'rtl';
+document.querySelectorAll('[data-fa]').forEach(e=>e.textContent=en?e.dataset.en:e.dataset.fa);
+}
+</script>
+</body>
+</html>
