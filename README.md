@@ -18,4 +18,4 @@
 - نشانی: تهران، میدان تجریش، خیابان فناخسرو، پاساژ تندیس، طبقه منفی یک، واحد ۷۲
 - ساعات کاری: هر روز ۱۱ تا ۲۱
 - تماس: ۰۹۱۲۳۳۹۴۲۲۰ و ۰۹۹۳۶۹۱۲۶۴۲
-- اینستاگرام: [@Arvan_carpet](https://instagram.com/Arvan_carpet)
+- اینستاگرام: [@Arvan_carpett](https://www.instagram.com/Arvan_carpett/)
