@@ -93,6 +93,6 @@ $('add').onclick=()=>{let price=Number($('cp').value);if(!(price>0))return alert
 $('samples').onclick=e=>{let b=e.target.closest('[data-del]');if(!b)return;let a=load();a.splice(+b.dataset.del,1);localStorage.setItem(key+'-samples',JSON.stringify(a));draw()};
 $('clear').onclick=()=>{if(confirm('همه نمونه‌های ذخیره‌شده پاک شوند؟')){localStorage.removeItem(key+'-samples');draw()}};
 $('export').onclick=()=>{let data=JSON.stringify({samples:load(),reports:JSON.parse(localStorage.getItem(key+'-reports')||'[]')},null,2),url=URL.createObjectURL(new Blob([data],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='0912-backup.json';a.click();URL.revokeObjectURL(url)};
-$('cd').value=new Date().toISOString().slice(0,10);draw();
+$('cd').value=new Date().toISOString().slice(0,10);draw();drawBases();
 if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
 </script></body></html>
