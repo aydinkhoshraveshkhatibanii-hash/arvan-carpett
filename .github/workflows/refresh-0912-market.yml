@@ -1,5 +1,10 @@
 name: Refresh 0912 market snapshot
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/refresh-0912-market.yml'
+      - 'scripts/refresh_0912_market.py'
   workflow_dispatch:
   schedule:
     - cron: "15 5 * * *"
