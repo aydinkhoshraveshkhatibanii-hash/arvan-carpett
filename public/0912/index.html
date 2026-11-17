@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#12392f"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>کارشناس ۰۹۱۲ | قیمت‌گذاری</title>
+<style>
+:root{color-scheme:light;--bg:#f4f6f2;--card:#fff;--ink:#17241e;--muted:#66756c;--green:#174d3d;--gold:#c6a66a;--line:#e1e8e1;--soft:#eaf3ed;--red:#8d3b30}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;line-height:1.7}
+header{padding:24px 18px 31px;background:linear-gradient(140deg,#102b24,#236047);color:#fff;border-radius:0 0 26px 26px}.eyebrow{font-size:12px;color:#d9c99e}.title{font-size:26px;font-weight:850;margin:3px 0}.subtitle{font-size:13px;color:#dbe7df}
+main{max-width:760px;margin:-15px auto 0;padding:0 13px 32px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;margin-bottom:13px;box-shadow:0 4px 16px #183b2c08}h2{font-size:17px;margin:0 0 12px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.field{margin-bottom:10px}label{display:block;font-size:12px;color:var(--muted);margin-bottom:5px}input,select,textarea{width:100%;border:1px solid #d6e0d8;background:#fbfcfb;border-radius:11px;padding:12px;font:inherit;color:var(--ink);min-width:0}button{border:0;border-radius:12px;background:var(--green);color:white;font:inherit;font-weight:750;padding:12px 14px;width:100%;cursor:pointer}.secondary{background:var(--soft);color:var(--green);border:1px solid #d7e6dc}.btnrow{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}.note{font-size:12px;color:var(--muted)}.tag{display:inline-block;background:var(--soft);color:var(--green);border-radius:30px;padding:3px 9px;font-size:11px;margin-left:4px}.results{display:none}.pricegrid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.price{background:#f7f9f7;border:1px solid var(--line);border-radius:13px;padding:11px}.price small{display:block;color:var(--muted);font-size:11px}.price strong{font-size:18px;display:block;margin-top:3px}.featured{background:#edf5ef;border-color:#c9ddce}.featured strong{color:var(--green)}.rule{border:0;border-top:1px solid var(--line);margin:14px 0}.metric{display:flex;justify-content:space-between;gap:10px;font-size:13px}.list{padding-right:20px;margin:8px 0}.list li{margin:5px 0}.danger{color:var(--red)}.footer{text-align:center;color:var(--muted);font-size:11px;padding:8px 0 18px}.record{border-top:1px solid var(--line);padding:10px 0;font-size:13px}@media(max-width:380px){.grid,.pricegrid{grid-template-columns:1fr}.title{font-size:23px}}
+</style>
+</head>
+<body>
+<header><div class="eyebrow">ابزار تخصصی بازار سیم‌کارت</div><div class="title">کارشناس ۰۹۱۲</div><div class="subtitle">تحلیل الگوی شماره · برآورد خرید و فروش · دفتر آگهی‌های مشابه</div></header>
+<main>
+<section class="card"><h2>مشخصات سیم‌کارت</h2>
+<div class="field"><label for="num">شماره کامل</label><input id="num" inputmode="numeric" autocomplete="off" placeholder="0912xxxxxxxx" maxlength="15"></div>
+<div class="grid">
+<div class="field"><label for="status">وضعیت خط</label><select id="status"><option value="used">کارکرده</option><option value="zero">صفر / بدون کارکرد</option><option value="unknown">نامشخص</option></select></div>
+<div class="field"><label for="goal">هدف کارشناسی</label><select id="goal"><option value="buy">خرید</option><option value="sell">فروش</option><option value="invest">سرمایه‌گذاری</option></select></div>
+<div class="field"><label for="seller">قیمت فروشنده (میلیون تومان)</label><input id="seller" type="number" min="0" placeholder="اختیاری"></div>
+<div class="field"><label for="speed">سرعت معامله</label><select id="speed"><option value="normal">معمولی</option><option value="fast">فوری</option><option value="patient">بدون عجله</option></select></div>
+</div>
+<button id="run">تهیه گزارش کارشناسی</button>
+<p class="note">مبنای قیمت باید با آگهی‌های تازه و شماره‌های هم‌رده اصلاح شود. این نسخه خودکار به سایت‌های آگهی متصل نیست و قیمت زنده تضمین نمی‌کند.</p></section>
+<section class="card results" id="results"><h2>گزارش کارشناسی <span class="tag" id="code"></span></h2><div id="formatted" style="font-size:20px;font-weight:850;margin-bottom:8px"></div>
+<div class="pricegrid">
+<div class="price"><small>خرید جذاب</small><strong id="buy"></strong></div><div class="price featured"><small>هدف معامله</small><strong id="target"></strong></div>
+<div class="price"><small>فروش فوری تخمینی</small><strong id="quick"></strong></div><div class="price"><small>قیمت شروع آگهی</small><strong id="ask"></strong></div>
+</div><hr class="rule"><div class="metric"><span>الگوی رندی شناسایی‌شده</span><b id="pattern"></b></div><div class="metric"><span>اطمینان کارشناسی</span><b class="danger">پایین تا متوسط</b></div><p id="advice"></p><p id="comparison" class="note"></p>
+<div class="btnrow"><button class="secondary" id="copy">کپی گزارش</button><button class="secondary" id="save">ذخیره گزارش</button></div></section>
+<section class="card"><h2>بانک نمونه‌های بازار</h2><p class="note">هر ردیف باید قیمت آگهی واقعی و تاریخ مشاهده داشته باشد. ثبت نمونه‌ها باعث می‌شود مقایسه‌های بعدی مستندتر شوند.</p>
+<div class="grid"><div class="field"><label for="cn">شماره مشابه (اختیاری)</label><input id="cn" inputmode="numeric" placeholder="0912..."></div><div class="field"><label for="cp">قیمت آگهی (میلیون تومان)</label><input id="cp" type="number" min="1" placeholder="مثلاً ۱۳۵"></div><div class="field"><label for="cd">تاریخ مشاهده</label><input id="cd" type="date"></div><div class="field"><label for="cs">منبع / لینک کوتاه</label><input id="cs" placeholder="نام سایت یا لینک"></div></div><button id="add" class="secondary">ثبت نمونه بازار</button><div id="samples"></div>
+<div class="btnrow"><button class="secondary" id="export">خروجی پشتیبان JSON</button><button class="secondary" id="clear">پاک‌کردن نمونه‌ها</button></div></section>
+<section class="card"><h2>چک‌لیست معامله امن</h2><ul class="list"><li>تطبیق شماره و هویت مالک از مسیر معتبر</li><li>استعلام بدهی و محدودیت‌های احتمالی</li><li>انتقال رسمی مالکیت پیش از تسویه نهایی</li><li>مقایسه حداقل ۳ تا ۵ شماره هم‌کد و هم‌الگو</li><li>قیمت آگهی را قیمت معامله قطعی فرض نکن</li></ul></section>
+<div class="footer">کارشناس ۰۹۱۲ · نسخه وب قابل استفاده در آیفون · قیمت‌ها تخمینی‌اند، نه تضمین بازار.</div>
+</main>
+<script>
+const $=id=>document.getElementById(id), key='expert0912-v1';
+const d=s=>String(s||'').replace(/[۰-۹]/g,x=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(x)).replace(/[٠-٩]/g,x=>'٠١٢٣٤٥٦٧٨٩'.indexOf(x)).replace(/\D/g,'');
+const fa=n=>Number(n).toLocaleString('fa-IR',{maximumFractionDigits:1});
+const money=n=>fa(Math.round(n))+' میلیون تومان';
+function pattern(n){let t=n.slice(4),a=[],s=0;if(/(\d)\1{2,}/.test(t)){a.push('سه رقم یا بیشتر تکراری');s+=2}if(/(\d)\1/.test(t)){a.push('جفت‌رقم');s+=1}if(/(\d)(\d)\1\2/.test(t)){a.push('تناوب دو رقمی');s+=2}if(/(\d)(\d)\1/.test(t)){a.push('تکرار قرینه');s++}if(/012|123|234|345|456|567|678|789/.test(t)){a.push('ترتیب صعودی');s+=2}if(/987|876|765|654|543|432|321|210/.test(t)){a.push('ترتیب نزولی');s+=2}return {text:a.length?a.join('، '):'الگوی برجسته خودکار یافت نشد',score:s}}
+let report='';
+function run(){let n=d($('num').value);if(n.length!==11||!n.startsWith('0912')){alert('شماره باید ۱۱ رقم و با 0912 شروع شود.');return}let c=+n[4],p=pattern(n);
+ // Conservative editable heuristic only. It is not a live market quote.
+ let bases={0:95,1:520,2:240,3:170,4:150,5:140,6:130,7:120,8:110,9:100},mid=bases[c]*(1+Math.min(.5,p.score*.06));
+ if($('status').value==='zero')mid*=1.05;if($('status').value==='unknown')mid*=.97;
+ let buy=mid*.84,target=mid,quick=mid*($('speed').value==='fast'?.82:$('speed').value==='patient'?.92:.88),ask=mid*($('speed').value==='fast'?1.07:$('speed').value==='patient'?1.2:1.14);
+ $('results').style.display='block';$('code').textContent='کد '+('۰۱۲۳۴۵۶۷۸۹'[c]);$('formatted').textContent=n.replace(/(\d{4})(\d{3})(\d{4})/,'$1 $2 $3').replace(/\d/g,x=>'۰۱۲۳۴۵۶۷۸۹'[x]);
+ $('buy').textContent=money(buy);$('target').textContent=money(target);$('quick').textContent=money(quick);$('ask').textContent=money(ask);$('pattern').textContent=p.text;
+ $('advice').textContent=$('goal').value==='buy'?'راهبرد خرید: از محدوده خرید جذاب شروع کن و قبل از پرداخت، نمونه‌های هم‌کد و هم‌الگو را استعلام بگیر.':$('goal').value==='sell'?'راهبرد فروش: قیمت آگهی را از قیمت نقدی قابل انجام جدا کن و برای مذاکره فضای منطقی بگذار.':'راهبرد سرمایه‌گذاری: اختلاف خریدوفروش و نقدشوندگی را بسنج؛ رشد قیمت تضمین‌شده نیست.';
+ let s=Number($('seller').value);$('comparison').textContent=s>0?'قیمت فروشنده '+money(s)+' است؛ اختلاف آن با هدف محاسباتی '+money(Math.abs(s-target))+(s>target?' بالاتر':' پایین‌تر')+'. این مقایسه به‌تنهایی تأیید قیمت بازار نیست.':'قیمت فروشنده وارد نشده؛ برای تصمیم نهایی قیمت نقدی را ثبت کن.';
+ report='گزارش کارشناسی اولیه\nشماره: '+n+'\nکد: '+c+'\nالگو: '+p.text+'\nخرید جذاب: '+Math.round(buy)+' میلیون\nهدف معامله: '+Math.round(target)+' میلیون\nفروش فوری: '+Math.round(quick)+' میلیون\nقیمت آگهی: '+Math.round(ask)+' میلیون\nاطمینان: پایین تا متوسط؛ نیازمند مقایسه آگهی‌های روز.\nاین ارقام برآورد الگوریتمی‌اند و نرخ زنده تأییدشده نیستند.';
+ $('results').scrollIntoView({behavior:'smooth',block:'start'})}
+$('run').onclick=run;
+$('copy').onclick=async()=>{try{await navigator.clipboard.writeText(report);alert('گزارش کپی شد')}catch(e){prompt('گزارش را کپی کن',report)}};
+$('save').onclick=()=>{if(!report)return alert('اول گزارش تهیه کن');let a=JSON.parse(localStorage.getItem(key+'-reports')||'[]');a.unshift({date:new Date().toISOString(),report});localStorage.setItem(key+'-reports',JSON.stringify(a));alert('روی همین دستگاه ذخیره شد')};
+function load(){return JSON.parse(localStorage.getItem(key+'-samples')||'[]')}
+function draw(){let a=load();$('samples').innerHTML=a.length?a.map((x,i)=>'<div class="record"><b>'+(x.number||'شماره ثبت نشده')+'</b> · '+fa(x.price)+' میلیون تومان<br><span class="note">'+(x.source||'منبع نامشخص')+' · '+(x.date||'بدون تاریخ')+'</span> <button class="secondary" style="width:auto;padding:4px 9px" data-del="'+i+'">حذف</button></div>').join(''):'<p class="note">هنوز نمونه‌ای ثبت نشده است.</p>'}
+$('add').onclick=()=>{let price=Number($('cp').value);if(!(price>0))return alert('قیمت آگهی را وارد کن');let a=load();a.unshift({number:d($('cn').value),price,date:$('cd').value,source:$('cs').value});localStorage.setItem(key+'-samples',JSON.stringify(a));$('cn').value='';$('cp').value='';$('cs').value='';draw()};
+$('samples').onclick=e=>{let b=e.target.closest('[data-del]');if(!b)return;let a=load();a.splice(+b.dataset.del,1);localStorage.setItem(key+'-samples',JSON.stringify(a));draw()};
+$('clear').onclick=()=>{if(confirm('همه نمونه‌های ذخیره‌شده پاک شوند؟')){localStorage.removeItem(key+'-samples');draw()}};
+$('export').onclick=()=>{let data=JSON.stringify({samples:load(),reports:JSON.parse(localStorage.getItem(key+'-reports')||'[]')},null,2),url=URL.createObjectURL(new Blob([data],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='0912-backup.json';a.click();URL.revokeObjectURL(url)};
+$('cd').value=new Date().toISOString().slice(0,10);draw();
+</script></body></html>
