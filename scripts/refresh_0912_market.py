@@ -46,7 +46,14 @@ def main():
    errors.append(f"{url}: {type(exc).__name__}: {exc}"); print(errors[-1],file=sys.stderr)
   if idx<len(SOURCES)-1: time.sleep(2)
  unique={}
- for row in records: unique[(row["number"],row["price"],row["source"])]=row
+ for row in records:
+  key=(row["number"],row["price"])
+  if key not in unique:
+   row["alsoSeenAt"]=[row["source"]]
+   unique[key]=row
+  elif row["source"] not in unique[key]["alsoSeenAt"]:
+   unique[key]["alsoSeenAt"].append(row["source"])
+   unique[key]["source"]=" / ".join(unique[key]["alsoSeenAt"])
  records=sorted(unique.values(),key=lambda x:(x["number"],x["price"]))
  if not records: raise SystemExit("No listings parsed; leaving the previous market snapshot untouched.")
  data={"schemaVersion":1,"updatedAt":observed,"status":"auto-scraped-candidates","note":"Automated public-page extraction. Candidate asking prices only; not verified transactions. Check source listing and freshness before relying on any price.","sources":[u for _,u in SOURCES],"errors":errors,"records":records}
