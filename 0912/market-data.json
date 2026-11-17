@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-17T07:14:00Z",
+  "status": "initial-research-snapshot",
+  "note": "Initial research snapshot compiled from publicly indexed listings on 2026-11-17. Daily GitHub Actions refresh attempts to replace it with parsed public-page candidates. Asking prices only; not verified transactions.",
+  "sources": [
+    "https://pishkhan912.com/numbers",
+    "https://pishkhan912.com/simcards/codes",
+    "https://simkala.com/"
+  ],
+  "records": [
+    {
+      "number": "09123170731",
+      "price": 959,
+      "status": "کارکرده",
+      "kind": "listing",
+      "source": "پیشخوان ۹۱۲",
+      "url": "https://pishkhan912.com/numbers",
+      "date": "2026-11-17",
+      "sourceListingAge": "حدود ۹ ساعت پیش"
+    },
+    {
+      "number": "09129318695",
+      "price": 120,
+      "status": "کارکرده",
+      "kind": "listing",
+      "source": "پیشخوان ۹۱۲",
+      "url": "https://pishkhan912.com/numbers",
+      "date": "2026-11-17",
+      "sourceListingAge": "حدود ۱ روز"
+    },
+    {
+      "number": "09127226354",
+      "price": 165,
+      "status": "کارکرده",
+      "kind": "listing",
+      "source": "پیشخوان ۹۱۲",
+      "url": "https://pishkhan912.com/numbers",
+      "date": "2026-11-17",
+      "sourceListingAge": "حدود ۱ روز"
+    },
+    {
+      "number": "09127263908",
+      "price": 160,
+      "status": "کارکرده",
+      "kind": "listing",
+      "source": "پیشخوان ۹۱۲",
+      "url": "https://pishkhan912.com/numbers",
+      "date": "2026-11-17",
+      "sourceListingAge": "حدود ۱ روز"
+    },
+    {
+      "number": "09123250196",
+      "price": 200,
+      "status": "کارکرده",
+      "kind": "listing",
+      "source": "پیشخوان ۹۱۲",
+      "url": "https://pishkhan912.com/numbers",
+      "date": "2026-11-17",
+      "sourceListingAge": "حدود ۶ روز"
+    },
+    {
+      "number": "09128940577",
+      "price": 130,
+      "status": "کارکرده",
+      "kind": "listing",
+      "source": "پیشخوان ۹۱۲",
+      "url": "https://pishkhan912.com/numbers",
+      "date": "2026-11-17",
+      "sourceListingAge": "حدود ۲ هفته"
+    },
+    {
+      "number": "09120589237",
+      "price": 75,
+      "status": "کارکرده",
+      "kind": "listing",
+      "source": "پیشخوان ۹۱۲",
+      "url": "https://pishkhan912.com/numbers",
+      "date": "2026-11-17",
+      "sourceListingAge": "حدود ۱ هفته"
+    },
+    {
+      "number": "09120872369",
+      "price": 81,
+      "status": "صفر",
+      "kind": "listing",
+      "source": "پیشخوان ۹۱۲",
+      "url": "https://pishkhan912.com/numbers?condition=zero",
+      "date": "2026-11-17",
+      "sourceListingAge": "حدود ۳ هفته"
+    },
+    {
+      "number": "09120617230",
+      "price": 99,
+      "status": "کارکرده",
+      "kind": "listing",
+      "source": "پیشخوان ۹۱۲",
+      "url": "https://pishkhan912.com/numbers",
+      "date": "2026-11-17",
+      "sourceListingAge": "حدود ۵ روز"
+    },
+    {
+      "number": "09128810325",
+      "price": 105,
+      "status": "کارکرده",
+      "kind": "listing",
+      "source": "پیشخوان ۹۱۲",
+      "url": "https://pishkhan912.com/numbers",
+      "date": "2026-11-17",
+      "sourceListingAge": "حدود ۲ هفته"
+    },
+    {
+      "number": "09120861733",
+      "price": 115,
+      "status": "کارکرده",
+      "kind": "listing",
+      "source": "پیشخوان ۹۱۲",
+      "url": "https://pishkhan912.com/numbers",
+      "date": "2026-11-17",
+      "sourceListingAge": "حدود ۳ روز"
+    },
+    {
+      "number": "09129340086",
+      "price": 117,
+      "status": "کارکرده",
+      "kind": "listing",
+      "source": "پیشخوان ۹۱۲",
+      "url": "https://pishkhan912.com/numbers",
+      "date": "2026-11-17",
+      "sourceListingAge": "حدود ۱ هفته"
+    },
+    {
+      "number": "09120320986",
+      "price": 125,
+      "status": "کارکرده",
+      "kind": "listing",
+      "source": "پیشخوان ۹۱۲",
+      "url": "https://pishkhan912.com/numbers",
+      "date": "2026-11-17",
+      "sourceListingAge": "حدود ۱ هفته"
+    },
+    {
+      "number": "09123385461",
+      "price": 180,
+      "status": "کارکرده",
+      "kind": "listing",
+      "source": "پیشخوان ۹۱۲",
+      "url": "https://pishkhan912.com/numbers",
+      "date": "2026-11-17",
+      "sourceListingAge": "حدود ۳ روز"
+    },
+    {
+      "number": "09125052553",
+      "price": 193,
+      "status": "کارکرده",
+      "kind": "listing",
+      "source": "پیشخوان ۹۱۲",
+      "url": "https://pishkhan912.com/numbers",
+      "date": "2026-11-17",
+      "sourceListingAge": "حدود ۱ روز"
+    }
+  ]
+}
